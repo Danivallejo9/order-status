@@ -1,0 +1,156 @@
+* {
+    font-family: arial;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.contenedorPadre_imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 18px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    height: 200px;
+    width: 250px;
+
+}
+
+
+/*Creando animación imagen*/
+
+
+
+img {
+    width: 300px;
+    height: auto;
+    border: 1px solid #000000;
+    border-radius: 18px;
+    border-width: 0px;
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin: 0px 18px;
+    margin-bottom: 18px;
+
+}
+
+caption {
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid black;
+    border-color: #000000;
+    border-width: 2px;
+    border-radius: 18px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 25px;
+    animation-name: caption-scale;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+/*Creando animación de caption*/
+
+
+
+h3 {
+    
+    -webkit-text-fill-color:  rgb(39, 37, 3);
+    
+}
+
+.contenedor_icon_info_llamada {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.icon_telefono {
+    float: left;
+}
+
+table {
+    position: relative;
+    margin: 4px -35px;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+
+tbody td {
+
+    border: 1px solid black;
+    font-size: 12px;
+}
+
+table th {
+    background: black;
+    color:  white;
+}
+
+th, td {
+    padding: 13px;
+    border: 1px solid black;
+}
+
+#data td:last-child {
+    text-align: center;
+  }
+
+/*Lineas impares(odd). Lineas pares(even)*/
+
+
+
+
+
+/*Efecto hover con el cursor*/
+tbody tr:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    border-bottom: 1px solid black;
+
+}
+
+.responsive_tabla {
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .image-samy {
+        width: 156px;
+    }
+
+    .contenedor_imagen {
+        margin: 0px;
+    }
+
+    .Contenedor_descripción{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; 
+        overflow: hidden;
+        } 
+}      
+
+  
+  

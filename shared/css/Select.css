@@ -1,0 +1,61 @@
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: #2c3e50;
+  background-image: none;
+  cursor: pointer;
+  width: 20em;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 40%;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  justify-content: center;
+  margin: auto;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 820px)
+{
+  .select {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px)
+{
+  .select {
+    width: 80%;
+  }
+}

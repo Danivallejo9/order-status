@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../assets/img/favicon.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="wallet.css?v=dadadaada" />
+    <title>Wallet</title>
+  </head>
+  <body>
+    <main class="display-none">
+      <div class="logo-white">
+        <img
+          src="../../assets/img/LOGO-SAMY-BLANCO-ESTEFA.png"
+          alt="Image-Logo"
+          class="Image-Samy"
+        />
+      </div>
+      <h2>Cartera</h2>
+      <section id="wallet-client">
+        <div class="display-none">
+          <h2 id="client-name" class="Nombre"></h2>
+          <div class="client-portolio">
+            <div>Limite Crédito</div>
+            <div>Deuda Total</div>
+            <div>Días Mora</div>
+            <div>Cupo Disponible</div>
+            <div id="credit-limit"></div>
+            <div id="total-debt"></div>
+            <div id="arrears-days"></div>
+            <div id="limit-space"></div>
+          </div>
+        </div>
+      </section>
+      <div class="container-table">
+        <table class="main-table">
+          <thead class="table-head">
+            <tr class="first-row-thead">
+              <th class="thead-th">Factura</th>
+              <th class="thead-th">Pague antes de</th>
+              <th class="thead-th">Saldo</th>
+              <th class="thead-th">Días</th>
+            </tr>
+          </thead>
+          <tbody class="table-tbody-2"></tbody>
+        </table>
+      </div>
+      <div>
+        <button class="btn-pay" id="pay-button">Pague aquí</button>
+      </div>
+    </main>
+    <script type="module" src="wallet.js?v=564"></script>
+  </body>
+</html>
