@@ -91,7 +91,7 @@
 						'' AS status,
 						CONVERT(date, P.FECHA_PEDIDO) AS release_date,
 						CONVERT(date, P.FECHA_CREACION) AS release_order, --CONVERT(date, samy.PEDIDO.FECHA_ORDEN) AS release_order,
-						'' AS deliver_start, --CONVERT(date,samy.PEDIDO.FECHA_PROX_EMBARQU) AS deliver_start,
+						CONVERT(date, P.FECHA_PROX_EMBARQU) AS deliver_start,
 						CONVERT(date, DR.RemesaFechaEntrega) AS deliver_end,
 						DR.Remesa AS remittance, 
 						DR.Estado AS status_remittance 
