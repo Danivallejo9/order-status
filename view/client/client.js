@@ -135,22 +135,31 @@ const infoWalllet = async (client = null) => {
   const url = `${baseUrl}Wallet/Client?token=${client}`;
   const response = await (await fetch(url)).json();
   const table = document.getElementById("data-wallet");
-  // const name = document.querySelector(".Nombre");
   let html = "";
+
   const item = response;
 
-  // name.innerHTML = formatName(item.nombre);
+  // Normalizamos valores numéricos para evitar NaN
+  const limite = Number(item.limite) || 0;
+  const deuda = Number(item.deuda) || 0;
+  const dia_atraso = Number(item.dia_atraso) || 0;
+  const cupo_disp = Number(item.cupo_disp) || 0;
+  const total_pedido = Number(item.total_pedido) || 0;
+
+  const cupoDisponible = cupo_disp - total_pedido;
+
   html += `
     <tr>
-      <td>${numberFormat(item.limite)}</td>
-      <td>${numberFormat(item.deuda)}</td>
-      <td>${numberFormat(item.dia_atraso)}</td>
-      <td>${numberFormat(item.cupo_disp - item.total_pedido)}</td>
+      <td>${numberFormat(limite)}</td>
+      <td>${numberFormat(deuda)}</td>
+      <td>${numberFormat(dia_atraso)}</td>
+      <td>${numberFormat(cupoDisponible)}</td>
     </tr>
   `;
 
   table.innerHTML = html;
 };
+
 
 let formatName = (fullName) => {
   const nameParts = fullName.split(" ");
